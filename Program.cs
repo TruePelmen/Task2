@@ -6,7 +6,11 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            Vehicle a = new Vehicle("ascd", 1912, 3223.4, 4, 1000);
+            Console.WriteLine(a);
+            Console.WriteLine(a.Cost());
+            string str = Console.ReadLine();
         }
     }
 }
