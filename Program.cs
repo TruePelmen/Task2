@@ -10,7 +10,12 @@ namespace Task2
             Vehicle a = new Vehicle("ascd", 1912, 3223.4, 4, 1000);
             Console.WriteLine(a);
             Console.WriteLine(a.Cost());
-            string str = Console.ReadLine();
+            Console.WriteLine("Enter the info about vehicle: ");
+            Vehicle b = Console.ReadLine();
+            Console.WriteLine(b);
+            Console.WriteLine(a<b);
+            Console.WriteLine(b<a);
+            Console.ReadLine();
         }
     }
 }

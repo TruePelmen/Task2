@@ -37,5 +37,35 @@ namespace Task2
         {
             return cost*1.15;
         }
+        public static bool operator <(Vehicle this_, Vehicle other)
+        {
+            return this_.Cost() < other.Cost();
+        }
+        public static bool operator >(Vehicle this_, Vehicle other)
+        {
+            return this_.Cost() > other.Cost();
+        }
+        public static Vehicle Parse(string input)
+        {
+            var parts = input.Split(",");
+            return new Vehicle
+            {
+                registration_number = parts[0],
+                year = uint.Parse(parts[1]),
+                race = double.Parse(parts[2]),
+                seats = uint.Parse(parts[3]),
+                cost = double.Parse(parts[4])
+            };
+        }
+        public static implicit operator Vehicle(string input)
+        {
+            return Parse(input);
+        }
+        public static void ReadPerson(out Vehicle v)
+        {
+            Console.Write("Enter name and age separated by comma: ");
+            v = Parse(Console.ReadLine());
+        }
     }
 }
+
