@@ -15,6 +15,8 @@ namespace Task2
             Console.WriteLine(b);
             Console.WriteLine(a<b);
             Console.WriteLine(b<a);
+            Taxi t = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150);
+            Console.WriteLine(t);
             Console.ReadLine();
         }
     }
