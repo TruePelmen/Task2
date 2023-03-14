@@ -17,7 +17,7 @@ namespace Task2
         }
         public override string ToString()
         {
-            return this.maxspeed + ", " + base.ToString();
+            return base.ToString() + "\tMax speed: " + this.maxspeed;
         }
     }
 }
