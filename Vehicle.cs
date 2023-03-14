@@ -13,6 +13,48 @@ namespace Task2
         private double race;
         private uint seats;
         private double cost;
+        //Getters
+        public string GetRegNum()
+        {
+            return registration_number;
+        }
+        public uint GetYear()
+        {
+            return year;
+        }
+        public double GetRace()
+        {
+            return race;
+        }
+        public uint GetSeats()
+        {
+            return seats;
+        }
+        public double GetCost()
+        {
+            return cost;
+        }
+        //Setters
+        public void SetRegNum(string r_n)
+        {
+            registration_number = r_n;
+        }
+        public void SetYear(uint y)
+        {
+            year = y;
+        }
+        public void SetRace(double r)
+        {
+            race = r;
+        }
+        public void SetSeats(uint s)
+        {
+            seats = s;
+        }
+        public void SetCost(double c)
+        {
+            cost = c;
+        }
         public Vehicle()
         {
             registration_number = "";
