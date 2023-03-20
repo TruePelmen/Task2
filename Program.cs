@@ -22,7 +22,7 @@ namespace Task2
             Console.WriteLine(t);
             t.SetNTO(true);
             t.Trip(15000.0);
-
+            //Console.WriteLine(t.Price(100.0, 4));
 
 
             Console.ReadLine();

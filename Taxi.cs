@@ -19,5 +19,9 @@ namespace Task2
         {
             return base.ToString() + "\tMax speed: " + this.maxspeed;
         }
+        public double Price(double km, int passengers)
+        {
+            return km * GetCost() / passengers;
+        }
     }
 }
