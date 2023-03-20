@@ -11,7 +11,7 @@ namespace Task2
         private uint maxspeed;
         private double price;
         public Taxi(): base() { maxspeed = 0; }
-        public Taxi(string r_n, uint y, double r, uint s, double c, uint m_s, bool nto) : base(r_n, y, r, s, c, nto) 
+        public Taxi(string r_n, uint y, double r, uint s, double c, uint m_s, bool nto, double rwltswd) : base(r_n, y, r, s, c, nto, rwltswd) 
         { 
             maxspeed = m_s; 
         }

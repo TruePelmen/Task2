@@ -14,6 +14,7 @@ namespace Task2
         private uint seats;
         private double cost;
         private bool need_to;
+        private double race_when_lastTS_was_done;
         //Getters
         public string GetRegNum()
         {
@@ -39,6 +40,10 @@ namespace Task2
         {
             return need_to;
         }
+        public double GetRWLTSWD()
+        {
+            return race_when_lastTS_was_done;
+        }
         //Setters
         public void SetRegNum(string r_n)
         {
@@ -63,6 +68,11 @@ namespace Task2
         public void SetNTO(bool status)
         {
             need_to = status;
+            race_when_lastTS_was_done = race;
+        }
+        public void SetRWLTSWD(double RWLTSWD)
+        {
+            race_when_lastTS_was_done = RWLTSWD;
         }
         public Vehicle()
         {
@@ -72,8 +82,9 @@ namespace Task2
             seats = 0;
             cost = 0.0;
             need_to = false;
+            race_when_lastTS_was_done = 0.0;
         }
-        public Vehicle(string r_n, uint y, double r, uint s, double c, bool nto)
+        public Vehicle(string r_n, uint y, double r, uint s, double c, bool nto, double rwltswd)
         {
             registration_number = r_n;
             year = y;
@@ -81,6 +92,7 @@ namespace Task2
             seats = s;
             cost = c;
             need_to = nto;
+            race_when_lastTS_was_done = rwltswd;
         }
         public override string ToString()
         {
@@ -88,7 +100,7 @@ namespace Task2
         }
         public double Price()
         {
-            return cost*1.15;
+            return cost * 1.15;
         }
         public static bool operator <(Vehicle this_, Vehicle other)
         {
@@ -120,13 +132,32 @@ namespace Task2
             Console.Write("Enter name and age separated by comma: ");
             v = Parse(Console.ReadLine());
         }
-        
+        public bool CheckTS()
+        {
+            return (DateTime.Now.Year - GetYear() < 10 || GetNTO());
+        }
         public void Trip(double km)
         {
-            if(GetNTO())
+            if(CheckTS())
             {
-                double limit = 
+                if(km>=15000.0)
+                {
+                    SetNTO(false);
+                }
                 race += km;
+                if(race - race_when_lastTS_was_done > 15000.0)
+                {
+                    SetNTO(false);
+                }   
+                Console.WriteLine($"The trip has ended successfully! Race is now {race} km.");
+                if(!GetNTO())
+                {
+                    Console.WriteLine("Technical service is needed now!");
+                }
+                else
+                {
+                    Console.WriteLine("Technical service is not needed yet.");
+                }
             }
             else
             {
