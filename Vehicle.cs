@@ -96,7 +96,7 @@ namespace Task2
         }
         public override string ToString()
         {
-            return $"Vehicle: \n\tRegistration number:{registration_number}; \n\tYear: {year}; \n\tRace: {race}; \n\tSeats: {seats}; \n\tCost:{cost}; \n\t Is TS needed: {need_to}\n";
+            return $"Vehicle: \n\tRegistration number:{registration_number}; \n\tYear: {year}; \n\tRace: {race}; \n\tSeats: {seats}; \n\tCost:{cost}; \n\tIs TS needed: {need_to}\n";
         }
         public double Price()
         {

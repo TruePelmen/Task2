@@ -23,8 +23,8 @@ namespace Task2
             t.SetNTO(true);
             t.Trip(15000.0);
             //Console.WriteLine(t.Price(100.0, 4));
-
-
+            Bus b = new Bus("khjg", 1988, 16433.4, 3, 1000, true, false, 10000.0);
+            Console.WriteLine(b);
             Console.ReadLine();
         }
     }
