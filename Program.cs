@@ -36,6 +36,7 @@ namespace Task2
             Console.WriteLine(t1 == t2);
             Console.WriteLine(t1 > t2);
             Console.WriteLine(t1 < t2);
+            Console.WriteLine(t1.CompareTo(t2));
 
             /*
             Console.WriteLine("Enter n: ");

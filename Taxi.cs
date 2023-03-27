@@ -64,7 +64,14 @@ namespace Task2
 
         public int CompareTo(Taxi other)
         {
-            return this.maxspeed.CompareTo(other.maxspeed);
+            Taxi arg = other as Taxi; 
+            if (arg != null) 
+            { if (this.maxspeed > arg.maxspeed) return 1; 
+                else if (this.maxspeed < arg.maxspeed) return -1; 
+                else return 0; 
+            } 
+            else throw new ArgumentException("Not Taxi"); 
+            //return this.maxspeed.CompareTo(other.maxspeed);
             //return this.maxspeed.CompareTo(other.GetMaxSpeed());
         }
     }
