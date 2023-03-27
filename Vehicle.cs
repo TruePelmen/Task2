@@ -74,6 +74,7 @@ namespace Task2
         {
             race_when_lastTS_was_done = RWLTSWD;
         }
+        // Constructors
         public Vehicle()
         {
             registration_number = "";
@@ -94,6 +95,7 @@ namespace Task2
             need_to = nto;
             race_when_lastTS_was_done = rwltswd;
         }
+        // Other methods
         public override string ToString()
         {
             return $"Vehicle: \n\tRegistration number:{registration_number}; \n\tYear: {year}; \n\tRace: {race}; \n\tSeats: {seats}; \n\tCost:{cost}; \n\tIs TS needed: {need_to}\n";
@@ -158,6 +160,7 @@ namespace Task2
                 {
                     Console.WriteLine("Technical service is not needed yet.");
                 }
+                cost += 0.01 * km;
             }
             else
             {

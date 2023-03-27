@@ -6,6 +6,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
+            /*
             //Console.WriteLine("Hello World!");
             Vehicle a = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
             Console.WriteLine(a);
@@ -23,9 +24,32 @@ namespace Task2
             t.SetNTO(true);
             t.Trip(15000.0);
             //Console.WriteLine(t.Price(100.0, 4));
-            Bus b = new Bus("khjg", 1988, 16433.4, 3, 1000, true, false, 10000.0);
+            Bus b = new Bus("khjg", 1988, 16433.4, 3, 1000, true, true, 10000.0);
             Console.WriteLine(b);
-            Console.ReadLine();
+            b.Trip(1000.0);
+            Console.WriteLine(b);
+            Console.WriteLine(b.Price_for_trip(200.0, 49));           
+            */
+
+            Taxi t1 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
+            Taxi t2 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 170, false, 10000.0);
+            Console.WriteLine(t1 == t2);
+            Console.WriteLine(t1 > t2);
+            Console.WriteLine(t1 < t2);
+
+            /*
+            Console.WriteLine("Enter n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Vehicle[] arr = new Vehicle[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Console.ReadLine();
+            }
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.ReadLine();*/
         }
     }
 }
