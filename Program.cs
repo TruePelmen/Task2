@@ -31,14 +31,14 @@ namespace Task2
             Console.WriteLine(b.Price_for_trip(200.0, 49));           
             */
 
-            Taxi t1 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
-            Taxi t2 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 170, false, 10000.0);
-            Console.WriteLine(t1 == t2);
-            Console.WriteLine(t1 > t2);
-            Console.WriteLine(t1 < t2);
-            Console.WriteLine(t1.CompareTo(t2));
+            //Taxi t1 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
+            //Taxi t2 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 170, false, 10000.0);
+            ////Console.WriteLine(t1 == t2);
+            ////Console.WriteLine(t1 > t2);
+            ////Console.WriteLine(t1 < t2);
+            //Console.WriteLine(t1.CompareTo(t2));
 
-            /*
+
             Console.WriteLine("Enter n: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Vehicle[] arr = new Vehicle[n];
@@ -50,7 +50,8 @@ namespace Task2
             {
                 Console.WriteLine(arr[i]);
             }
-            Console.ReadLine();*/
+            Console.ReadLine();
+
         }
     }
 }

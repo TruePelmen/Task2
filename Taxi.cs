@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+//using System.Collections.IEnumerable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,15 +38,7 @@ namespace Task2
         public static Taxi Parse(string input)
         {
             var parts = input.Split(" ");
-            return new Taxi
-            {
-                //this.SetRegNum(parts[0]),
-                //year = uint.Parse(parts[1]),
-                //race = double.Parse(parts[2]),
-                //seats = uint.Parse(parts[3]),
-                //cost = double.Parse(parts[4]),
-                //need_to = bool.Parse(parts[5])
-            };
+            return new Taxi(parts[0], uint.Parse(parts[1]), double.Parse(parts[2]), uint.Parse(parts[3]), double.Parse(parts[4]), uint.Parse(parts[5]), bool.Parse(parts[6]), double.Parse(parts[7]));
         }
         public static implicit operator Taxi(string input)
         {
@@ -64,15 +57,15 @@ namespace Task2
 
         public int CompareTo(Taxi other)
         {
-            Taxi arg = other as Taxi; 
-            if (arg != null) 
-            { if (this.maxspeed > arg.maxspeed) return 1; 
-                else if (this.maxspeed < arg.maxspeed) return -1; 
-                else return 0; 
-            } 
-            else throw new ArgumentException("Not Taxi"); 
+            //Taxi arg = other as Taxi; 
+            //if (arg != null) 
+            //{ if (this.maxspeed > arg.maxspeed) return 1; 
+            //    else if (this.maxspeed < arg.maxspeed) return -1; 
+            //    else return 0; 
+            //} 
+            //else throw new ArgumentException("Not Taxi"); 
             //return this.maxspeed.CompareTo(other.maxspeed);
-            //return this.maxspeed.CompareTo(other.GetMaxSpeed());
+            return this.maxspeed.CompareTo(other.GetMaxSpeed());
         }
     }
 }
