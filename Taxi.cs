@@ -38,7 +38,14 @@ namespace Task2
         public static Taxi Parse(string input)
         {
             var parts = input.Split(" ");
-            return new Taxi(parts[0], uint.Parse(parts[1]), double.Parse(parts[2]), uint.Parse(parts[3]), double.Parse(parts[4]), uint.Parse(parts[5]), bool.Parse(parts[6]), double.Parse(parts[7]));
+            return new Taxi(parts[0], 
+                uint.Parse(parts[1]), 
+                double.Parse(parts[2]), 
+                uint.Parse(parts[3]), 
+                double.Parse(parts[4]), 
+                uint.Parse(parts[5]), 
+                bool.Parse(parts[6]), 
+                double.Parse(parts[7]));
         }
         public static implicit operator Taxi(string input)
         {

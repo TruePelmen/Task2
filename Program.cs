@@ -39,6 +39,8 @@ namespace Task2
             //Console.WriteLine(t1.CompareTo(t2));
 
 
+
+            /*
             Console.WriteLine("Enter n: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Vehicle[] arr = new Vehicle[n];
@@ -51,7 +53,15 @@ namespace Task2
                 Console.WriteLine(arr[i]);
             }
             Console.ReadLine();
+            */
 
+            Vehicle vec = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
+            Console.WriteLine(vec.CheckTS());
+            vec.Trip(14500);
+            vec.Trip(15000);
+            vec.Trip(500);
+            vec.Trip(500);
+            vec.Trip(500);
         }
     }
 }

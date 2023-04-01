@@ -8,6 +8,9 @@ namespace Task2
 {
     class Vehicle
     {
+        //event
+        public event EventHandler ServiceNeeded;
+        // fields
         private string registration_number;
         private uint year;
         private double race;
@@ -15,6 +18,9 @@ namespace Task2
         private double cost;
         private bool need_to;
         private double race_when_lastTS_was_done;
+
+
+
         //Getters
         public string GetRegNum()
         {
@@ -164,8 +170,14 @@ namespace Task2
             }
             else
             {
-                Console.WriteLine("This vehicle neeeds TS! You cannot use it right now.");
+                OnServiceNeeded();
+                
             }
+        }        
+        protected virtual void OnServiceNeeded()
+        {
+            Console.WriteLine("This vehicle neeeds TS! You cannot use it right now.");
+            ServiceNeeded?.Invoke(this, EventArgs.Empty);
         }
     }
 }
