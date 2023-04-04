@@ -71,23 +71,88 @@ namespace Task2
 
 
 
-            //testing reading the taxi from the console
+            //testing reading the taxi and bus from the console
+
+            //dfgh 1999 50000 4 1000 150 false 45000
             //Taxi t = Console.ReadLine();
             //Console.WriteLine(t);
+            ////khgj 2005 50000 30 700 true false 45000
+            //Bus b = Console.ReadLine();
+            //Console.WriteLine(b);
+
+            // Testing List<Vehicle>
+            //Vehicle a = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
+            //Taxi t = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
+            //Bus b = new Bus("khjg", 1988, 16433.4, 3, 1000, true, true, 10000.0);
+            //List<Vehicle> veh_list = new List<Vehicle>();
+            //veh_list.Add(a);
+            //veh_list.Add(t);
+            //veh_list.Add(b);
+            //foreach (Vehicle v in veh_list)
+            //{
+            //    Console.WriteLine(v);
+            //}
 
 
+            //Testing reading from the console and pushing to the List<Vehicle>
+            //dfgh 1999 50000 4 1000 150 false 45000
+            //khgj 2005 50000 30 700 true false 45000
+            //ewwr 2010 12000 4 1500 true 10000
+            //qwer 2020 1500 45 500 true 500
+            //poiu 2000 25000 4 700 170 true 5000
+            //Console.WriteLine("Enter your Vehicles: ");
+            //List<Vehicle> veh_list = new List<Vehicle>();
+            //for(int i = 0; i < 5; i++)
+            //{
+            //    var vehicle = Console.ReadLine();
+            //    Console.WriteLine(vehicle);
+            //}
 
-            Vehicle a = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
-            Taxi t = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
-            Bus b = new Bus("khjg", 1988, 16433.4, 3, 1000, true, true, 10000.0);
-            List<Vehicle> veh_list = new List<Vehicle>();
-            veh_list.Add(a);
-            veh_list.Add(t);
-            veh_list.Add(b);
-            foreach (Vehicle v in veh_list)
-            {
-                Console.WriteLine(v);
-            }
+            //foreach(var i in veh_list)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            //Task 04.04.2023
+            //string a = "123 543 54 234 578 23 8 345 587 45";
+            //int[] arr = { 0 };
+            //try
+            //{
+            //    arr = Array.ConvertAll(a.Split(), s => int.Parse(s));
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine($"***Error^ {e.Message}");
+            //}
+            //foreach (int x in arr) Console.Write($"{x} ");
+            //List<int> list = new(arr);
+            //Console.WriteLine();
+            //foreach (int x in list) Console.Write($"{x} ");
+            //Stack<int> st = new Stack<int>();
+            //int numb = 100;     
+            //Queue<int> q = new Queue<int>();
+            //foreach (int x in arr) { if (x < numb) st.Push(x); else q.Enqueue(x); } ;
+            //Console.WriteLine();
+            //foreach (int x in st) Console.Write($"{x} ");
+            //Console.WriteLine();
+            //foreach (int x in q) Console.Write($"{x} ");
+            //Console.WriteLine();
+            //List<int> new_list = new List<int>();
+            //new_list.AddRange(st);
+            //new_list.AddRange(q);
+            //new_list = new_list.FindAll(x => x < 100);
+            //foreach (int x in new_list) Console.Write($"{x} ");
+            //new_list.Reverse();
+            //Console.WriteLine();
+            //foreach (int x in new_list) Console.Write($"{x} ");
+            //Console.WriteLine();
+            //foreach (int x in arr) Console.Write($"{x} ");
+            //string new_string = string.Join(" ", arr);
+            //Console.WriteLine();
+            //Console.WriteLine(new_string);
+
+            //class string_builder
         }
     }
 }

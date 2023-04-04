@@ -29,13 +29,13 @@ namespace Task2
         }
         public override string ToString()
         {
-            return base.ToString() + "\tMax speed: " + this.maxspeed;
+            return $"Taxi: \n\tRegistration number:{GetRegNum()}; \n\tYear: {GetYear()}; \n\tRace: {GetRace()}; \n\tSeats: {GetSeats()}; \n\tCost:{GetCost()}; \n\tIs TS needed: {GetNTO()}\n" + "\tMax speed: " + this.maxspeed;  //base.ToString()
         }
         public double Price_for_trip(double km, int passengers)
         {
             return Math.Round(km * GetCost() / passengers, 2);
         }
-        public static Taxi Parse(string input)
+        public new static Taxi Parse(string input)
         {
             var parts = input.Split(" ");
             return new Taxi(parts[0], 
@@ -51,9 +51,9 @@ namespace Task2
         {
             return Parse(input);
         }
-        public static void ReadVehicle(out Taxi v)
+        public static void ReadTaxi(out Taxi v)
         {
-            Console.Write("Enter name and age separated by comma: ");
+            Console.Write("Enter all fields separated by ' ': ");
             v = Parse(Console.ReadLine());
         }
 

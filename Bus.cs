@@ -24,11 +24,35 @@ namespace Task2
         }
         public override string ToString()
         {
-            return base.ToString() + "\tAir conditing: " + this.has_air_cond;
+            return $"Vehicle: \n\tRegistration number:{GetRegNum()}; \n\tYear: {GetYear()}; \n\tRace: {GetRace()}; \n\tSeats: {GetSeats()}; \n\tCost:{GetCost()}; \n\tIs TS needed: {GetNTO()}\n" + "\tAir conditing: " + this.has_air_cond;
         }
         public double Price_for_trip(double km, int passengers)
         {
             return Math.Round(km * GetCost() / passengers/2, 2);
         }
+
+
+        public new static Bus Parse(string input)
+        {
+            var parts = input.Split(" ");
+            return new Bus(parts[0],
+                uint.Parse(parts[1]),
+                double.Parse(parts[2]),
+                uint.Parse(parts[3]),
+                double.Parse(parts[4]),
+                bool.Parse(parts[5]),
+                bool.Parse(parts[6]),
+                double.Parse(parts[7]));
+        }
+        public static implicit operator Bus(string input)
+        {
+            return Parse(input);
+        }
+        public static void ReadBus(out Bus v)
+        {
+            Console.Write("Enter all fields separated by ' ': ");
+            v = Parse(Console.ReadLine());
+        }
+
     }
 }
