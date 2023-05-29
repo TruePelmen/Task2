@@ -19,8 +19,6 @@ namespace Task2
         private bool need_to;
         private double race_when_lastTS_was_done;
 
-
-
         //Getters
         public string GetRegNum()
         {

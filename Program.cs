@@ -33,29 +33,50 @@ namespace Task2
             */
 
 
-            //Taxi t1 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
-            //Taxi t2 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 170, false, 10000.0);
-            ////Console.WriteLine(t1 == t2);
-            ////Console.WriteLine(t1 > t2);
-            ////Console.WriteLine(t1 < t2);
+            Taxi t1 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 150, false, 10000.0);
+            Taxi t2 = new Taxi("khjg", 1988, 16433.4, 3, 1000, 170, false, 10000.0);
             //Console.WriteLine(t1.CompareTo(t2));
 
+            // Використання формату "T" - всі дані про таксі
+            string formatG = t1.ToString("T");
+            Console.WriteLine(formatG);
+
+            // Використання формату "RN" - тільки реєстраційний номер
+            string formatR = t1.ToString("RN");
+            Console.WriteLine(formatR);
 
 
-            /*
-            Console.WriteLine("Enter n: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Vehicle[] arr = new Vehicle[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr[i] = Console.ReadLine();
-            }
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine(arr[i]);
-            }
-            Console.ReadLine();
-            */
+
+
+            //Console.WriteLine("Enter n: ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //Vehicle[] arr = new Vehicle[n];
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine("Enter type of the vehicle: taxi or bus");
+            //    string choice = Console.ReadLine();
+            //    if(choice=="Taxi")
+            //    {
+            //        Taxi t = Console.ReadLine();
+            //        arr[i] = t;
+            //    }
+            //    //arr[i] = Console.ReadLine();
+            //    else if(choice == "Bus")
+            //    {
+            //        Bus b = Console.ReadLine();
+            //        arr[i] = b;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Wrong input!");
+            //    }
+            //}
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
+            //Console.ReadLine();
+
 
 
 
@@ -100,18 +121,31 @@ namespace Task2
             //ewwr 2010 12000 4 1500 true 10000
             //qwer 2020 1500 45 500 true 500
             //poiu 2000 25000 4 700 170 true 5000
+
+
+
+
+
+
             //Console.WriteLine("Enter your Vehicles: ");
             //List<Vehicle> veh_list = new List<Vehicle>();
-            //for(int i = 0; i < 5; i++)
+            //for (int i = 0; i < 5; i++)
             //{
             //    var vehicle = Console.ReadLine();
             //    Console.WriteLine(vehicle);
             //}
-
-            //foreach(var i in veh_list)
+            //foreach (var i in veh_list)
             //{
             //    Console.WriteLine(i);
             //}
+
+
+
+
+
+
+
+
 
 
             //Task 04.04.2023

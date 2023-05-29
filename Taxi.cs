@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 //using System.Collections.IEnumerable;
 using System.Linq;
 using System.Text;
@@ -57,9 +58,33 @@ namespace Task2
             v = Parse(Console.ReadLine());
         }
 
+        public string ToString(string format)
+        {
+            return this.ToString(format, CultureInfo.CurrentCulture);
+        }
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            return this.ToString();
+            if (format == null)
+            {
+                // Якщо формат не вказано, повертаємо значення в форматі за замовчуванням
+                format = "T";
+            }
+
+            switch (format.ToUpper())
+            {
+                case "T":
+                    // Формат "T" - повертає всю інформацію про таксі
+                    return this.ToString();//$"Taxi: {GetRegNum()}, Year: {GetYear()}, Race: {GetRace()}, Seats: {GetSeats()}, Cost: {GetCost()}, Max Speed: {GetMaxSpeed()}, Technical service is needed: {GetNTO()}, Last TS Date: {GetRWLTSWD()}";
+                case "RN":
+                    // Формат "RN" - повертає тільки реєстраційний номер
+                    return $"Registration Number: {GetRegNum()}";
+                case "Y&R":
+                    // Формат "Y&R" - повертає рік випуску і пробіг
+                    return $"Year: {GetYear()}, Race: {GetRace()}";
+                default:
+                    // Якщо вказаний невідомий формат, просто повертаємо значення в форматі за замовчуванням
+                    return ToString("T", formatProvider);
+            }
         }
 
         public int CompareTo(Taxi other)

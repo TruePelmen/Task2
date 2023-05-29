@@ -24,7 +24,7 @@ namespace Task2
         }
         public override string ToString()
         {
-            return $"Vehicle: \n\tRegistration number:{GetRegNum()}; \n\tYear: {GetYear()}; \n\tRace: {GetRace()}; \n\tSeats: {GetSeats()}; \n\tCost:{GetCost()}; \n\tIs TS needed: {GetNTO()}\n" + "\tAir conditing: " + this.has_air_cond;
+            return $"Bus: \n\tRegistration number:{GetRegNum()}; \n\tYear: {GetYear()}; \n\tRace: {GetRace()}; \n\tSeats: {GetSeats()}; \n\tCost:{GetCost()}; \n\tIs TS needed: {GetNTO()}\n" + "\tAir conditing: " + this.has_air_cond;
         }
         public double Price_for_trip(double km, int passengers)
         {
