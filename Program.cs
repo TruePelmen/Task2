@@ -82,18 +82,19 @@ namespace Task2
 
 
             //testing the event
-            //Vehicle vec = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
-            //Console.WriteLine(vec.CheckTS());
-            //vec.Trip(14500);
-            //vec.Trip(15000);
-            //vec.Trip(500);
-            //vec.Trip(500);
-            //vec.Trip(500);
+            Vehicle vec = new Vehicle("ascd", 1912, 3223.4, 4, 1000, true, 3000.0);
+            Console.WriteLine(vec.CheckTS());
+            HandlerForVehicle hfv = new HandlerForVehicle(vec);
+            vec.Trip(14500);
+            vec.Trip(15000);
+            vec.Trip(500);
+            vec.Trip(500);
+            vec.Trip(500);
+
 
 
 
             //testing reading the taxi and bus from the console
-
             //dfgh 1999 50000 4 1000 150 false 45000
             //Taxi t = Console.ReadLine();
             //Console.WriteLine(t);
@@ -114,18 +115,12 @@ namespace Task2
             //    Console.WriteLine(v);
             //}
 
-
             //Testing reading from the console and pushing to the List<Vehicle>
             //dfgh 1999 50000 4 1000 150 false 45000
             //khgj 2005 50000 30 700 true false 45000
             //ewwr 2010 12000 4 1500 true 10000
             //qwer 2020 1500 45 500 true 500
             //poiu 2000 25000 4 700 170 true 5000
-
-
-
-
-
 
             //Console.WriteLine("Enter your Vehicles: ");
             //List<Vehicle> veh_list = new List<Vehicle>();
@@ -138,15 +133,6 @@ namespace Task2
             //{
             //    Console.WriteLine(i);
             //}
-
-
-
-
-
-
-
-
-
 
             //Task 04.04.2023
             //string a = "123 543 54 234 578 23 8 345 587 45";

@@ -6,10 +6,24 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
+    class HandlerForVehicle
+    {
+        public delegate void Delegate();  // delegate
+        public event Delegate deleg;
+        public HandlerForVehicle(Vehicle v)
+        {
+            v.ServiceNeeded += I_See;
+        }
+        public void I_See()
+        {
+            Console.WriteLine("Yes, I see that event was invoken. Vehicle needs TS.");
+        }
+    }
     class Vehicle
     {
         //event
-        public event EventHandler ServiceNeeded;
+        public delegate void Delegate();
+        public event Delegate ServiceNeeded;
         // fields
         private string registration_number;
         private uint year;
@@ -175,7 +189,7 @@ namespace Task2
         protected virtual void OnServiceNeeded()
         {
             Console.WriteLine("This vehicle neeeds TS! You cannot use it right now.");
-            ServiceNeeded?.Invoke(this, EventArgs.Empty);
+            ServiceNeeded?.Invoke();
         }
     }
 }
